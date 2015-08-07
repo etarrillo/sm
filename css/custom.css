@@ -1,0 +1,101 @@
+text-shadow (n) {
+  -webkit-text-shadow: n;
+  -moz-text-shadow: n;
+  -ms-text-shadow: n;
+  text-shadow: n;
+}
+transition (n) {
+  -webkit-transition: n;
+  -moz-transition: n;
+  -ms-transition: n;
+  transition: n;
+}
+border-radius (n) {
+  -webkit-border-radius: n;
+  -moz-border-radius: n;
+  -ms-border-radius: n;
+  border-radius: n;
+}
+body {
+  background-color: #ededed;
+  font-size: 16px;
+  font-family: 'Roboto Slab' serif;
+}
+.row div {
+  outline: 1px solid #808080;
+}
+.btn {
+  color: #fff;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #800000;
+  border-bottom: 3px solid #4b0000;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #4b0000;
+  border-bottom: 3px solid #800000;
+  color: #fff;
+}
+header {
+  background-color: #800000;
+  border-bottom: 5px solid #4b0000;
+}
+section {
+  padding: 20px;
+}
+section.main {
+  background-image: url("../img/bg-header.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+section.main .box-txt {
+  width: 50%;
+  margin: 5% 0 5% 5%;
+  background-color: rgba(255,255,255,0.7);
+  padding: 3%;
+}
+section.main .box-txt h1 {
+  color: #800000;
+  text-shadow: 0 1px 0 #4b0000;
+  border-bottom: 1px solid #800000;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+section.main .box-txt h2 {
+  color: #800000;
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  margin-top: 0px;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 20px;
+  font-weight: lighter;
+}
+section.main .box-txt h2 span {
+  font-weight: bolder;
+}
+section.content article,
+section.content .welcome-program,
+section.content .access-program {
+  text-align: center;
+}
+section.content-teachers .docente img {
+  width: 100%;
+  height: auto;
+}
+section.content-teachers .docente .redes-sociales {
+  height: 25px;
+}
+section.content-teachers .docente .redes-sociales ul li a {
+  font-size: 12px;
+}
+section.content-teachers .docente .name p {
+  font-size: 15px;
+  font-weight: 400;
+}
+section.content-teachers .docente .biografia p {
+  font-size: 13px;
+  font-weight: 300;
+}

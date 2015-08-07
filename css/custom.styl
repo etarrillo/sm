@@ -1,0 +1,109 @@
+//colores
+$blanco = #ffffff
+$rojo = #800000
+$rojo-oscuro = #4B0000
+
+//mixins
+text-shadow (n)
+	-webkit-text-shadow n
+	-moz-text-shadow n
+	-ms-text-shadow n
+	text-shadow n
+	
+transition (n)
+	-webkit-transition n
+	-moz-transition n
+	-ms-transition n
+	transition n
+	
+border-radius (n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	-ms-border-radius n
+	border-radius n
+	
+body
+	background-color #ededed
+	font-size 16px
+	font-family 'Roboto Slab' serif
+
+.row
+	div
+		outline:1px solid gray;
+// Clases
+.btn
+	color $blanco
+	width 80%
+	text-align center
+	margin 0 auto
+	background-color $rojo
+	border-bottom 3px solid $rojo-oscuro
+	border-radius 3px
+	transition all 0.3s ease-in-out
+	&:hover
+		background-color $rojo-oscuro
+		border-bottom 3px solid $rojo
+		color $blanco
+		
+// cabecera
+header
+	background-color $rojo
+	border-bottom 5px solid $rojo-oscuro
+section
+	padding 20px
+section.main
+	background-image url('../img/bg-header.jpg')
+	background-size cover
+	background-attachment fixed
+	.box-txt
+		width 50%
+		margin 5% 0 5% 5%
+		background-color rgba(255, 255, 255, .7)
+		padding 3%
+		h1
+			color $rojo
+			text-shadow 0 1px 0 $rojo-oscuro
+			border-bottom 1px solid $rojo
+			padding-bottom 20px
+			margin-bottom 0px
+		h2
+			color $rojo
+			border-top 1px solid $blanco
+			padding-top 20px
+			margin-top 0px
+			text-shadow 0 1px 0 $blanco
+			font-size 20px
+			font-weight lighter
+			span
+				font-weight bolder
+
+section.content
+	article
+	.welcome-program
+		
+	.access-program
+		text-align center
+section.content-teachers
+	.docente
+		img
+			width 100%
+			height auto
+		.redes-sociales
+			height 25px
+			ul
+				li
+					a
+						font-size 12px;
+		.name
+			p
+				font-size 15px
+				font-weight 400
+		.biografia
+			p 
+				font-size 13px;
+				font-weight 300
+				
+
+
+
+
