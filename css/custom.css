@@ -1,28 +1,10 @@
-text-shadow (n) {
-  -webkit-text-shadow: n;
-  -moz-text-shadow: n;
-  -ms-text-shadow: n;
-  text-shadow: n;
-}
-transition (n) {
-  -webkit-transition: n;
-  -moz-transition: n;
-  -ms-transition: n;
-  transition: n;
-}
-border-radius (n) {
-  -webkit-border-radius: n;
-  -moz-border-radius: n;
-  -ms-border-radius: n;
-  border-radius: n;
-}
 body {
   background-color: #ededed;
   font-size: 16px;
-  font-family: 'Roboto Slab' serif;
+  font-family: 'Roboto Slab' serif!important;
 }
 .row div {
-  outline: 1px solid #808080;
+  /*outline: 1px solid #808080;*/
 }
 .btn {
   color: #fff;
@@ -81,8 +63,21 @@ section.content .welcome-program,
 section.content .access-program {
   text-align: center;
 }
+section.content .access-program h3{
+  font-size: 15px;
+}
+section.content .welcome-program p{
+  color: #004D83;
+  padding: 2% 0 0 0;
+  font-size: 17px;
+}
+section.content-teachers .docente{
+  width: 90%;
+  padding: 1%;
+  margin: 0 auto;
+}
 section.content-teachers .docente img {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 section.content-teachers .docente .redes-sociales {
@@ -90,12 +85,138 @@ section.content-teachers .docente .redes-sociales {
 }
 section.content-teachers .docente .redes-sociales ul li a {
   font-size: 12px;
+  color: #800000;
+}
+section.content-teachers .docente .name{
+  background-color: #004D83;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
 }
 section.content-teachers .docente .name p {
   font-size: 15px;
   font-weight: 400;
+  color: #ffffff;
+  margin: 10px 0;
 }
 section.content-teachers .docente .biografia p {
   font-size: 13px;
   font-weight: 300;
+  padding: 10px;
+}
+
+section.content-sponsors .col-md-4 .row div{
+ 
+}
+
+
+section.content-sponsors .col-md-4 img{
+  width: 50%;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+section.content-sponsors .col-md-4 h4{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+section.content-sponsors .col-md-4 p{
+  text-align: center;
+}
+
+section.content-sponsors .col-md-6 div{
+ 
+  
+}
+
+section.content-sponsors .col-md-6 img{
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+  padding-top: 25px;
+  
+}
+
+section.content-sponsors .col-md-6 h4{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  background-color: #FFCC33;
+  color: #FFF;
+  padding: 5px;
+}
+
+h3{
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+}
+
+h3.italic{
+  font-style: italic;
+
+}
+
+span.num{
+  color: #004D83;
+  font-size: 32px;
+  display: block;
+}
+
+article.access-program a{
+  border-radius: 8px;
+  -ms-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  background-color: #004D83;
+  padding: 10px !important;
+  display: block;
+}
+
+/*PROCESO DE INV*/
+
+div.box-invest{
+  background-image: url(../img/process.png);
+  width: 270px;
+  height: 235px;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 22px;
+  
+}
+.box-invest h3{
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+.box-invest h3 span{
+  display: block;
+  color: #FFCC33;
+  width: 75%;
+  margin: 0 auto 15px auto;
+  font-size: 40px!important;
+}
+
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item{
+  padding: 20px;
+  margin-left: 0px!important;
+}
+
+footer{
+  border-top: 1px solid #004D83;
+  padding: 15px 0;
+}
+
+.content-why{
+  background-image: url(../img/bg-why.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
