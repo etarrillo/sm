@@ -8,7 +8,7 @@ body {
 }
 .btn {
   color: #fff;
-  width: 80%;
+  width: 60%;
   text-align: center;
   margin: 0 auto;
   background-color: #800000;
@@ -69,7 +69,8 @@ section.content .access-program h3{
 section.content .welcome-program p{
   color: #004D83;
   padding: 2% 0 0 0;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 100;
 }
 section.content-teachers .docente{
   width: 90%;
@@ -79,6 +80,7 @@ section.content-teachers .docente{
 section.content-teachers .docente img {
   width: 80%;
   height: auto;
+  margin: 0 auto;
 }
 section.content-teachers .docente .redes-sociales {
   height: 25px;
@@ -146,7 +148,7 @@ h2{
   text-align: center;
   background-color: #FFCC33;
   color: #FFF;
-  padding: 5px;
+  padding: 15px 0;
 }
 
 h3{
@@ -159,7 +161,8 @@ footer{
 
 h3.italic{
   font-style: italic;
-
+  font-weight: 100;
+  color: #FFCC33;
 }
 
 span.num{
@@ -173,7 +176,6 @@ article.access-program a{
   -ms-border-radius: 8px;
   -webkit-border-radius: 8px;
   -o-border-radius: 8px;
-  background-color: #004D83;
   padding: 10px !important;
   display: block;
 }
@@ -192,10 +194,10 @@ div.box-invest{
   
 }
 .box-invest h3{
-  text-align: center;
-  width: 70%;
-  margin: 0 auto;
-  padding-top: 5%;
+    text-align: center;
+    width: 65%;
+    margin: 0 auto 0 22px;
+    padding-top: 5%;
 }
 .box-invest h3 span{
   display: block;
@@ -215,8 +217,29 @@ footer{
   padding: 15px 0;
 }
 
+.content-why,
+.content-teachers{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
 .content-why{
   background-image: url(../img/bg-why.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+.content-teachers{
+  background-image: url(../img/bg-teachers.jpg);
+}
+.content-why img{
+  width: 60%;
+  height:auto;
+}
+.content-why h4{
+  color: #FFCC33;
+}
+.content-why p{
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 16px;
 }
