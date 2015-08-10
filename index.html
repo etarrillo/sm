@@ -5,8 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700,100">
-  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -16,9 +15,44 @@
 
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/animatescroll.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   
-  <script src="js/main.js"></script>
+  <script>
+  $(document).ready(function(){
+      $('#m-inicio').click(function(){
+        $('#inicio').animatescroll()
+      });
+      $('#m-expositores').click(function(){
+        $('#expositores').animatescroll()
+      });
+      $('#m-actividades').click(function(){
+        $('#actividades').animatescroll()
+      });
+      $('#m-ventajas').click(function(){
+        $('#ventajas').animatescroll()
+      });
+      $('#m-auspicio').click(function(){
+        $('#auspicio').animatescroll()
+      });
+
+      // scroll
+      //Check to see if the window is top if not then display button
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+          $('.scrollToTop').fadeIn();
+        } else {
+          $('.scrollToTop').fadeOut();
+        }
+      });
+      
+      //Click event to scroll to top
+      $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+      });
+    });
+  </script>
 
   
 </head>
@@ -26,25 +60,38 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-md-12"><img src="img/logo.png"></div>
+        <div class="col-md-4">
+          <a href="#">
+            <img class="pull-left" src="img/logo.png">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <nav class="pull-right">
+            <ul class="list-inline">
+                <li><a href="#" id="m-inicio">Inicio</a></li>
+                <li><a href="#" id="m-expositores">Expositores</a></li>
+                <li><a href="#" id="m-actividades">Actividades virtuales</a></li>
+                <li><a href="#" id="m-ventajas">Ventajas</a></li>
+                <li><a href="#" id="m-auspicio">Auspicio</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
-  <section class="main">
+
+  <section class="main" data-stellar-background-ratio=".1">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-7">
           <div class="box-txt">
             <h1>Programa para el Fortalecimiento de las Capacidades Docentes en Investigación</h1>
             <h2><span>Módulo I: </span> FORMULACIÓN DE PROYECTOS DE INVESTIGACIÓN BASADOS EN LA METODOLOGÍA DEL MARCO LÓGICO</h2>
           </div>
         </div>
+        <div class="col-md-offset-5"></div>
       </div>
-    </div>
-  </section>
-  <section class="content">
-    <div class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-7">
           <article class="welcome-program">
             <p>
@@ -61,10 +108,35 @@
             <h3>Regístrate con tu usuario y contraseña para acceder al Aula Virtual</h3><a href="#" class="btn">Entrar</a>
           </article>
         </div>
+      </div> -->
+    </div>
+  </section>
+
+
+  <section id="inicio" class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <article class="welcome-program">
+            <p>
+              Bienvenidos al programa para el Fortalecimiento de las Capacidades Docentes en Investigación, 
+              el cual logrará fortalecer las habilidades profesionales para el diseño de proyectos, así como 
+              el mejoramiento en el uso de las herramientas conceptuales y metodológicas de análisis de los 
+              fenómenos asociados a las causas, manifestaciones e impactos.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-5">
+          <article class="access-program">
+            <h2>Acceso al curso virtual</h2>
+            <h3>Regístrese con su usuario y contraseña para acceder al Aula Virtual</h3><a href="#" class="btn">Entrar</a>
+          </article>
+        </div>
       </div>
     </div>
   </section>
-  <section class="content-teachers">
+
+  <section id="expositores" class="content-teachers">
     <div class="container">
     <h2>Docentes expositores</h2>
       <div class="row row-centered">
@@ -73,33 +145,33 @@
           <!-- CARRUSEL -->
           <div id="owl-demo" class="owl-carousel owl-theme">   
             <div class="item">
-              <img src="img/profesores/avatar.jpg" class="img-responsive img-circle">
+              <img src="img/profesores/ruben_palomino.jpg" class="img-responsive img-circle">
               <div class="redes-sociales">
-                <ul class="list-inline">
+                <!-- <ul class="list-inline">
                   <li><a href="#" class="sprite-redes lk">Linkedin</a></li>
                   <li><a href="#" class="sprite-redes site">Site</a></li>
-                </ul>
+                </ul> -->
               </div>
               <div class="name">
-                <p>Lic. Albert Cerna Cueva</p>
+                <p>Rubén Palomino Meneses</p>
               </div>
               <div class="biografia">
                 <p>
-                  Consultor, asesor y Coach de empresa con más de 20 años de experiencia. Complementa sus estudios con el dominio de más de 10 metodologías innovadoras para el crecimiento empresarial.
+                  Economista especialista en Gestión del Desarrollo bajo enfoque de Gerencia pública y Gerencia privada empresarial y de ONG. Docente en Proyectos de Inversión, Planes de Negocios, entre otros.
                 </p>
               </div>                 
             </div>
 
             <div class="item">
-              <img src="img/profesores/avatar.jpg" class="img-responsive img-circle">
+              <img src="img/profesores/albert-cerna.jpg" class="img-responsive img-circle">
               <div class="redes-sociales">
-                <ul class="list-inline">
+                <!-- <ul class="list-inline">
                   <li><a href="#" class="sprite-redes lk">Linkedin</a></li>
                   <li><a href="#" class="sprite-redes site">Site</a></li>
-                </ul>
+                </ul> -->
               </div>
               <div class="name">
-                <p>Lic. Albert Cerna Cueva</p>
+                <p>Albert Cerna Cueva</p>
               </div>
               <div class="biografia">
                 <p>
@@ -109,73 +181,73 @@
             </div>
 
             <div class="item">
-              <img src="img/profesores/avatar.jpg" class="img-responsive img-circle">
+              <img src="img/profesores/marco-del-rio-navarro.jpg" class="img-responsive img-circle">
               <div class="redes-sociales">
-                <ul class="list-inline">
+                <!-- <ul class="list-inline">
                   <li><a href="#" class="sprite-redes lk">Linkedin</a></li>
                   <li><a href="#" class="sprite-redes site">Site</a></li>
-                </ul>
+                </ul> -->
               </div>
               <div class="name">
-                <p>Lic. Albert Cerna Cueva</p>
+                <p>Marco Del Rio Navarro</p>
               </div>
               <div class="biografia">
                 <p>
-                  Consultor, asesor y Coach de empresa con más de 20 años de experiencia. Complementa sus estudios con el dominio de más de 10 metodologías innovadoras para el crecimiento empresarial.
+                  Máster Internacional EADA/CENTRUM. Profesional con 12 años de experiencia en la Industria de Consumo Masivo. Consultor en temas de Emprendimiento y Nuevos Negocios.
                 </p>
               </div>  
             </div>
 
             <div class="item">
-              <img src="img/profesores/avatar.jpg" class="img-responsive img-circle">
+              <img src="img/profesores/julio_hernandez.png" class="img-responsive img-circle">
               <div class="redes-sociales">
                 <ul class="list-inline">
-                  <li><a href="#" class="sprite-redes lk">Linkedin</a></li>
-                  <li><a href="#" class="sprite-redes site">Site</a></li>
+                  <li><a href="mailto:jehvalz@gmail.com" class="sprite-redes lk">Correo electrónico</a></li>
+                  <!-- <li><a href="#" class="sprite-redes site">Site</a></li> -->
                 </ul>
               </div>
               <div class="name">
-                <p>Lic. Albert Cerna Cueva</p>
+                <p>Julio Hernández Valz</p>
               </div>
               <div class="biografia">
                 <p>
-                  Consultor, asesor y Coach de empresa con más de 20 años de experiencia. Complementa sus estudios con el dominio de más de 10 metodologías innovadoras para el crecimiento empresarial.
+                  Economista, con treinta años de experiencia profesional en temas de gestión pública, planeamiento estratégico, presupuesto público y gestión de la inversión pública.
                 </p>
               </div>  
             </div>
 
             <div class="item">
-              <img src="img/profesores/avatar.jpg" class="img-responsive img-circle">
+              <img src="img/profesores/grover_mejia_osorio.png" class="img-responsive img-circle">
               <div class="redes-sociales">
                 <ul class="list-inline">
-                  <li><a href="#" class="sprite-redes lk">Linkedin</a></li>
-                  <li><a href="#" class="sprite-redes site">Site</a></li>
+                  <!-- <li><a href="#" class="sprite-redes lk">Linkedin</a></li> -->
+                  <li><a href="mailto:grovermejia@hotmail.com" class="sprite-redes site">Correo electrónico</a></li>
                 </ul>
               </div>
               <div class="name">
-                <p>Lic. Albert Cerna Cueva</p>
+                <p>Grover Mejía Osorio</p>
               </div>
               <div class="biografia">
                 <p>
-                  Consultor, asesor y Coach de empresa con más de 20 años de experiencia. Complementa sus estudios con el dominio de más de 10 metodologías innovadoras para el crecimiento empresarial.
+                  Ingeniero Industrial con Maestría en Administración y Gerencia de Proyectos de Ingeniería. Consultor de Proyectos de inversión pública y privada. Ha participado en eventos internacionales en USA  y la India.
                 </p>
               </div>  
             </div>
 
             <div class="item">
-              <img src="img/profesores/avatar.jpg" class="img-responsive img-circle">
+              <img src="img/profesores/pedro-escobedo.png" class="img-responsive img-circle">
               <div class="redes-sociales">
-                <ul class="list-inline">
+                <!-- <ul class="list-inline">
                   <li><a href="#" class="sprite-redes lk">Linkedin</a></li>
                   <li><a href="#" class="sprite-redes site">Site</a></li>
-                </ul>
+                </ul> -->
               </div>
               <div class="name">
-                <p>Lic. Albert Cerna Cueva</p>
+                <p>Pedro Escobedo Rojas</p>
               </div>
               <div class="biografia">
                 <p>
-                  Consultor, asesor y Coach de empresa con más de 20 años de experiencia. Complementa sus estudios con el dominio de más de 10 metodologías innovadoras para el crecimiento empresarial.
+                  Economista, docente de la USMP. Asesor experto en Aceleración  de empresas en IPAE y en Centro de Innovación y Emprendimiento de la UNMSM – Facultad de Ingeniería Industrial.
                 </p>
               </div>  
             </div>
@@ -186,87 +258,103 @@
       </div>
     </div>
   </section>
-  <section class="content-process">
-    <div class="container">
-      <div class="row row-centered">
-        <h2>Proceso de Investigación</h2>
 
+  <section id="actividades" class="content-process">
+    
+        <h2>Desarrollo de actividades virtuales</h2>
+        <ul class="list-inline" id="procedimiento-sm">
+          <li>
+            <div class="grid">
+              <figure class="effect-marley">
+                <img src="img/process.png" alt="img18"/>
+                <figcaption>
+                  <h2>1. <span>Lectura de documentos digitales</span></h2>
+                  <p>Del 11 de agosto al 14 de agosto</p>
+                </figcaption>     
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="grid">
+              <figure class="effect-marley">
+                <img src="img/process.png" alt="img18"/>
+                <figcaption>
+                  <h2>2. <span>Participación en el foro</span></h2>
+                  <p>Del 15 de agosto al 18 de agosto</p>
+                </figcaption>     
+              </figure>
+            </div>          
+          </li>
           
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          
-          <div class="box-invest">
-            <h3>
-              <span>1</span>
-            Participe de las sesiones presenciales
-            </h3>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="box-invest">
-            <h3>
-              <span>2</span>
-            Complete las actividades virtuales
-            </h3>
-          </div>
-          
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="box-invest">
-            <h3>
-              <span>3</span>
-            Envíe su trabajo o propuesta de Investigación
-            </h3>
-          </div>         
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="box-invest">
-            <h3>
-              <span>4</span>
-            Complete los 3 módulos y obtenda su constancia
-            </h3>
-          </div>  
-          
-        </div>
-        
-      </div>
-      </div>
-    </div>
+          <li>
+            <div class="grid">
+              <figure class="effect-marley">
+                <img src="img/process.png" alt="img18"/>
+                <figcaption>
+                  <h2>3. <span>Participación  en el primer Chat</span></h2>
+                  <p>21 de agosto Revisión parcial del proyecto</p>
+                </figcaption>     
+              </figure>
+            </div>        
+          </li>
+
+          <li>
+            <div class="grid">
+              <figure class="effect-marley">
+                <img src="img/process.png" alt="img18"/>
+                <figcaption>
+                  <h2>4. <span>Participación  en el segundo Chat</span></h2>
+                  <p>24 de agosto Revisión y corrección final del proyecto</p>
+                </figcaption>     
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="grid">
+              <figure class="effect-marley">
+                <img src="img/process.png" alt="img18"/>
+                <figcaption>
+                  <h2>5. <span>Envío del trabajo final</span></h2>
+                  <p>25 de agosto Entrega del proyecto final</p>
+                </figcaption>     
+              </figure>
+            </div>
+          </li>
+        </ul> 
   </section>
 
-
- 
-
-
-  <section class="content-why">
+  <section id="ventajas" class="content-why">
     <div class="container">
       <div class="row">
         <h2>¿Por qué seguir esta capacitación?</h2>
-        <h3 class="italic">describir la importancia de este evento a realizar </h3>
         <div class="col-md-4">
           <img src="img/icon-1.png" alt="">
-          <h4>Documentación del curso</h4>
-          <p>El material del curso estará disponible en línea 24x7 a través del Campus Virtual.</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="img/icon-2.png" alt="">
-          <h4>Disponibilidad</h4>
-          <p>Podrá realizar las actividades desde cualquier lugar.</p>
+          <h4>Material accesible</h4>
+          <p>El material del curso estará disponible en línea 24x7 a través del Campus Virtual durante todo el desarrollo del curso.</p>
         </div>
 
         <div class="col-md-4">
           <img src="img/icon-3.png" alt="">
+          <h4>Disponibilidad</h4>
+          <p>odrá realizar las actividades virtuales en cualquier momento y desde cualquier lugar, solo debe tener una Pc con acceso a Internet.</p>
+        </div>
+
+        <div class="col-md-4">
+          <img src="img/icon-2.png" alt="">
           <h4>Tutoría permanente</h4>
-          <p>Tendrás docentes que te apoyarán durante el desarrollo del curso.</p>
+          <p>Contará con docentes que lo apoyarán durante el desarrollo de las actividades.</p>
         </div>
 
       </div><!-- row -->
     </div>
   </section>
-<section class="content-sponsors">
-  <div class="container">
+
+  <section id="auspicio" class="content-sponsors">
+    <div class="container">
       <div class="row row-centered">
-          <h2>Auspiciado por:</h2>
+          <h2>Auspiciado:</h2>
 
            <div class="col-md-6">
             <img src="img/escudo.png">
@@ -281,6 +369,7 @@
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
       <div class="row row-centered">
@@ -288,6 +377,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/owl.carousel.min.js"></script>
   <script>
   $(window).stellar();
@@ -317,4 +407,6 @@
       owl.trigger('owl.stop');
     })
   </script>
+  
+  <a href="#" class="scrollToTop">Inicio</a>
 </body>
